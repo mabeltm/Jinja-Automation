@@ -1,0 +1,16 @@
+Interfaces:
+  - name: "GigabitEthernet 0/1"
+    desc: "This is port 1"
+    type: "access"
+    access_vlan: 100
+    voice_vlan: 1000
+  - name: "GigabitEthernet 0/2"
+    desc: "This is port 2"
+    type: "access"
+    access_vlan: 100
+    voice_vlan: 1000
+  - name: "GigabitEthernet 0/3"
+    type: "access"
+    desc: "This is port 3"
+    access_vlan: 100
+    voice_vlan: 1000

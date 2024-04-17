@@ -1,0 +1,18 @@
+{% for interface in Interfaces %}
+!
+interface {{ interface["name"] }}
+{% if interface["desc"] != "" %}
+description {{ interface["desc"] }}
+{% endif %}
+{% if interface["type"] == "access" %}
+switchport mode access
+{% endif %}
+{% if interface["access_vlan"] %}
+switchport access vlan {{ interface["access_vlan"] }}
+{% endif %}
+{% if interface["voice_vlan"] %}
+switchport voice vlan {{ interface["voice_vlan"] }}
+{% endif %}
+!
+{% endfor -%}
+
